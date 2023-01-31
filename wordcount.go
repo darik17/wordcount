@@ -8,9 +8,9 @@ import (
 
 func main() {
 	args := os.Args[1:]
-	if len(args) > 0 {
-		fmt.Println(len(strings.Split(args[0], " ")))
-	} else {
+	if args[0] == "" {
 		fmt.Println(0)
+	} else {
+		fmt.Println(len(strings.Split(args[0], " ")))
 	}
 }
